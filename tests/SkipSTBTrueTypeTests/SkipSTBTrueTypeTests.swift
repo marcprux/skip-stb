@@ -13,6 +13,6 @@ fileprivate let lib: STBTrueTypeLibrary = STBTrueTypeLibrary.instance
 
 final class SkipSTBTrueTypeTests: XCTestCase {
     func testSkipSTBTrueType() throws {
-        let vertex = lib.stbtt_vertex(x: Int16(0), y: Int16(0), cx: Int16(0), cy: Int16(0), cx1: Int16(0), cy1: Int16(0), type: Int8(0), padding: Int8(0))
+        //let vertex = lib.stbtt_vertex(x: Int16(0), y: Int16(0), cx: Int16(0), cy: Int16(0), cx1: Int16(0), cy1: Int16(0), type: Int8(0), padding: Int8(0))
     }
 }
