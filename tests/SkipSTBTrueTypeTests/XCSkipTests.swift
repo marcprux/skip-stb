@@ -1,7 +1,7 @@
-import Foundation
 // This is free software: you can redistribute and/or modify it
 // under the terms of the GNU Lesser General Public License 3.0
 // as published by the Free Software Foundation https://fsf.org
+import Foundation
 
 #if os(macOS) // Skip transpiled tests only run on macOS targets
 import SkipTest
