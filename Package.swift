@@ -15,6 +15,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://source.skip.tools/skip.git", from: "0.7.42"),
+        .package(url: "https://source.skip.tools/skip-unit.git", from: "0.5.0"),
         .package(url: "https://source.skip.tools/skip-foundation.git", from: "0.3.15"),
         .package(url: "https://source.skip.tools/skip-ffi.git", from: "0.2.4")
     ],
@@ -30,9 +31,9 @@ let package = Package(
             .product(name: "SkipTest", package: "skip")
         ], plugins: [.plugin(name: "skipstone", package: "skip")]),
 
-        .target(name: "STBImage", sources: ["src"], cSettings: [
-            .define("SKIP_BUILD_NDK") // needed for Skip to add native gradle build support
-        ], plugins: [.plugin(name: "skipstone", package: "skip")]),
+        .target(name: "STBImage", dependencies: [
+            .product(name: "SkipUnit", package: "skip-unit")
+        ], sources: ["src"], plugins: [.plugin(name: "skipstone", package: "skip")]),
 
         //.target(name: "SkipSTBTrueType", dependencies: [
         //    "STBTrueType",
