@@ -14,10 +14,10 @@ let package = Package(
         //.library(name: "SkipSTBTrueType", type: .dynamic, targets: ["SkipSTBTrueType"]),
     ],
     dependencies: [
-        .package(url: "https://source.skip.tools/skip.git", from: "0.8.46"),
-        .package(url: "https://source.skip.tools/skip-unit.git", from: "0.7.0"),
-        .package(url: "https://source.skip.tools/skip-foundation.git", from: "0.6.11"),
-        .package(url: "https://source.skip.tools/skip-ffi.git", from: "0.3.2")
+        .package(url: "https://source.skip.tools/skip.git", from: "1.0.10"),
+        .package(url: "https://source.skip.tools/skip-unit.git", from: "1.0.0"),
+        .package(url: "https://source.skip.tools/skip-foundation.git", from: "1.1.2"),
+        .package(url: "https://source.skip.tools/skip-ffi.git", "0.0.0"..<"2.0.0")
     ],
     targets: [
         .target(name: "SkipSTBImage", dependencies: [
